@@ -9,32 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // final int _pageNumber = sliderList.length;
   final CarouselControllerImpl _pageController = CarouselControllerImpl();
-  // int _currentPage = 0;
-
   CatAPI api = CatAPI();
-
-  // List<Widget> _buildPageIndicator() {
-  //   List<Widget> list = [];
-  //   for (int i = 0; i < _pageNumber; i++) {
-  //     list.add(i == _currentPage ? _indicator(true) : _indicator(false));
-  //   }
-  //   return list;
-  // }
-
-  // Widget _indicator(bool isActive) {
-  //   return AnimatedContainer(
-  //     duration: Duration(milliseconds: 150),
-  //     margin: EdgeInsets.symmetric(horizontal: 8.0),
-  //     height: isActive ? 10 : 8,
-  //     width: isActive ? 10 : 8,
-  //     decoration: BoxDecoration(
-  //       color: isActive ? Colors.white : Colors.grey,
-  //       borderRadius: BorderRadius.all(Radius.circular(12)),
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -68,21 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Duration(milliseconds: 800),
                               autoPlayCurve: Curves.fastOutSlowIn,
                               enlargeCenterPage: true,
-                              onPageChanged: (index, reason) {
-                                // setState(() {
-                                //   index;
-                                // });
-                              },
+                              onPageChanged: (index, reason) {},
                             ),
                           ),
-                          // Stack(
-                          //   children: [
-                          //     Row(
-                          //       mainAxisAlignment: MainAxisAlignment.center,
-                          //       children: _buildPageIndicator(),
-                          //     ),
-                          //   ],
-                          // ),
                         ],
                       ),
                     ]),
